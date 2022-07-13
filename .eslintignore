@@ -1,0 +1,5 @@
+server.js
+public/build/*
+build/*
+node_modules/*
+prisma/seed.js
