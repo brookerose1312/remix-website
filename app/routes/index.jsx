@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import GitHubCalendar from "react-github-calendar";
 import { Row, Col } from "react-bootstrap";
+import ProgressiveImage from "react-progressive-graceful-image";
 
 const Home = () => (
     <Container className="justify-content-center mt-3" fluid>
@@ -14,13 +15,12 @@ const Home = () => (
           </h5>
         </Col>
         <Col className="d-flex justify-content-center" height={400}>
-          <img
+        <ProgressiveImage
             src="pfp.jpeg"
-            className="rounded-circle"
-            width={400}
-            height={400}
-            alt="Brooke"
-          />
+            placeholder="tiny-pfp.jpg"
+        >
+          {(src, loading) => <img src={src} style={{ filter: loading ? 'blur(1rem)' : ''}} className="rounded-circle" width={400} height={400} alt="Brooke" />}
+        </ProgressiveImage>
         </Col>
       </Row>
       <Container className="mt-3">

@@ -1,7 +1,6 @@
-/* eslint-disable import/no-unresolved */
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { NavLink } from "@remix-run/react";
-import brandPic from "public/brooke-logo.png";
+import ProgressiveImage from "react-progressive-graceful-image";
 
 const Header = () => (
     <Navbar
@@ -13,12 +12,12 @@ const Header = () => (
     >
       <Container fluid>
         <Navbar.Brand>
-          <img
-            src={brandPic}
-            width={80}
-            height={80}
-            alt="Brooke Rose Baer Personal Logo"
-          />
+        <ProgressiveImage
+            src="brooke-logo.png"
+            placeholder="tiny-brooke-logo.png"
+          >
+            {(src, loading) => <img src={src} style={{ filter: loading ? 'blur(1rem)' : ''}} width={80} height={80} alt="Remix.run Logo" />}
+          </ProgressiveImage>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="header-navbar" />
         <Navbar.Collapse id="header-navbar">

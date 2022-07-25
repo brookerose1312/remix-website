@@ -1,12 +1,17 @@
 import { Container, Card, Row, Col } from "react-bootstrap";
-// eslint-disable-next-line import/no-unresolved
+import ProgressiveImage from "react-progressive-graceful-image";
 
 const About = () => (
   <Container className="justify-content-center mt-3" fluid>
     <Container className="mt-3 px-4">
       <Row className="align-items-center">
         <Col className="d-flex justify-content-left" height={200}>
-          <img src="remix.png" width={200} height={200} alt="Remix.run Logo" />
+          <ProgressiveImage
+            src="remix.png"
+            placeholder="tiny-remix.png"
+          >
+            {(src, loading) => <img src={src} style={{ filter: loading ? 'blur(1rem)' : ''}} width={200} height={200} alt="Remix.run Logo" />}
+          </ProgressiveImage>
         </Col>
         <Col>
           <h2 className="text-center">Web development is what I excel at.</h2>
