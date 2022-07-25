@@ -1,4 +1,4 @@
-This is a [Remix.run](https://remix.run/) based project. This repository hosts the source code for my personal website, https://brooekro.se/
+This is a [Remix.run](https://remix.run/) based project. This repository hosts the source code for my personal website, https://brookero.se/
 
 ## Getting Started
 
