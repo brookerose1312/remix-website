@@ -1,9 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { NavLink } from "@remix-run/react";
 import brandPic from "public/brooke-logo.png";
 
-const Header = () => {
-  return (
+const Header = () => (
     <Navbar
       bg="dark"
       className="shadow"
@@ -40,6 +40,5 @@ const Header = () => {
       </Container>
     </Navbar>
   );
-};
 
 export default Header;
